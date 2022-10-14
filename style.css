@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fuzzy Bubbles', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color:aliceblue
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  border-radius: 50px;
+  color: rgb(6, 6, 6);
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.panel h3 {
+  font-size: 15px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  margin: 0;
+  padding: 20px;
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  text-transform:capitalize;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.7s; 
+}
+
+@media(max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display:none;
+  }
+}
+
+#panel1 {
+  background-image: url("https://wallpapercave.com/wp/wp2506825.jpg");
+  color: black;
+}
+#panel2 {
+  background-image: url("http://www.hdwallback.net/wp-content/uploads/2018/09/Ultra-High-Definition-4K-Nature-Desktop-Wallpaper.jpg");
+  color: white;
+}
+#panel3 {
+  background-image: url("https://img.wallpapersafari.com/tablet/2560/1700/84/58/izbVpk.jpg");
+  color: black;
+}
+#panel4 {
+  background-image: url("http://s1.picswalls.com/wallpapers/2017/12/10/uhd-wallpaper_11063138_312.jpg");
+  color: white;
+}
+#panel5 {
+  background-image: url("https://images.pexels.com/photos/1553962/pexels-photo-1553962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
